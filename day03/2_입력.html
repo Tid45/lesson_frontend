@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 { text-align: center; margin-top: 200px; }
+
+        #age { color: red; }
+    </style>
+</head>
+<body>
+    <h2>your age after 10 years</h2>
+    <script>
+        // let age = prompt('type your age');
+        // let after10 = Number(age) + 10;
+
+        // let age = prompt('type your age');
+        //     age = Number(age)+10;
+
+        
+        
+        
+
+        // let age = Number(prompt('type your age'))+10;
+
+        // document.write('<h2>your age will be<span id="age">' + age + '</span>. after 10 years.</h2>');
+
+
+
+        // document.write('<h2>your age will be<span id="age">' + age + 10 + '</span>. after 10 years.</h2>');
+        // 위에 꺼가 2910 값으로 나오게 되는건 앞에 문자가 있으니까 문자 + 숫자 =  문자가 되고 그후에 +10 이되서 결론적으로 문자로된거임
+    
+        // document.write('<h2>your age will be<span id="age">' + (age + 10) + '</span>. after 10 years.</h2>');
+        // 이렇게도 가능
+
+        // 사용자에게 정수 하나를 입력 받아서 해당 정수를 4로 나눴을때 몫과 나머지 출력하기
+        // 25 --> 4로 나눴을 때 몫 : 6
+        //        4로 나눴을 때 나머지 : 1
+               
+        // 사용자에게 두자릿 수 정수를 입력 받아서
+        // 해당 정수의 십의자리와 일의자리 숫자 출력하기
+
+        // let num = Number(prompt('두자릿 수 입력'));
+        // document.write('<p>십의자리 :' + parseInt(num/10) + ', 일의자리 :' + (num%10) + '</p>');
+
+        // 노래 한곡당 300원인 코인노래방이 있다
+        // 사용자에게 금액을 입력받아서 부를 수 있는 노래 곡수와 잔돈을 출력하기
+        // 1600 --> 부를 수 있는 노래는 5곡, 잔돈 100원
+
+        // -----------------------
+
+        let karaoke = Number(prompt('how many coin did you put?'));
+        document.write('<p>you can sing' + parseInt(karaoke/300) + 'songs,' + ' and coin left:' + (karaoke%300) + '</p>');
+        // let songCnt = parseInt(karaoke / 300);
+        // let rest = karaoke % 300;
+
+        // const price = 300;
+        // let songCnt = parseInt(karaoke / price);
+        // let rest = karaoke % price;
+        // document.write('<p>you can sing' + songCnt + 'songs,' + ' and coin left:' + rest + '</p>');
+
+        // +보다 % 우선순위가 높아서 굳이 ()안에 안해도됨
+        
+
+        // 사용자에게 국어점수, 영어점수, 수학점수를 입력 받아서 평균점수 출력하기
+
+        // ----------------------
+        // let lscore = prompt('type your language score');
+        // let escore = prompt('type your English score');
+        // let mscore = prompt('type your math score');
+
+        // let avg = (lscore+escore+mscore)/3
+
+        // document.write('your average score is' + avg +'.');
+
+
+
+        // console.log(parseInt(10.5));
+
+    </script>
+</body>
+</html>

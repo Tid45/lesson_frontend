@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log('클릭');console.log('반가워');">클릭하세요!</button>
+    <button onclick="test()">클릭하세요!-test</button>
+    <script>
+        function print() {
+            console.log('만나서 반갑습니다');
+            console.log('제 이름은 배상엽입니다');
+        }
+        print();
+        console.log('오늘은 수요일');
+        print();
+        console.log('-------------');
+
+        function test(name, age) {
+            console.log('만나서 반갑습니다');
+            console.log('제 이름은'+ name +'입니다');
+            console.log('제 나이는'+ age +'입니다');
+        }
+        // 결과 : 제 이름은undefined입니다
+
+        test('김철수',29);
+        // 결과 : 제 이름은 김철수입니다
+
+        //name 이라는 변수는 매개변수, parameter
+        //매개변수에는 함수를 사용할때 소괄호 안에서 넘겨준 값이 대입된다
+
+        //-------------------
+
+        //함수 사용 결과를 값으로 되돌리기
+        //매개변수로 전달받은 배열 속 요소의 총 합을 알아내는 함수
+
+        function getSumOfArray(ar) {
+            let total = 0;
+            for (let element of ar) {
+                total += element;
+            }
+            console.log(total);
+            return total; // return : 함수 사용 결과를 값으로 되돌려 준다.
+        }
+
+        getSumOfArray([1, 5, 4]);
+        console.log(getSumOfArray([1, 5, 4])/ 3);
+
+    </script>
+</body>
+</html>

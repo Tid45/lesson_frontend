@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>삼항연산자</h1>
+    <script>
+        console.log(true ? 'hi' : 18);
+        //hi
+        console.log(false ? 'hi' : 18);
+        //18
+
+        // 사용자에게 나이를 입력받고,
+        // 성인이라면 성인입니다. 미성년자라면
+        // 미성년자입니다 출력하기
+
+        // let age = Number(prompt('type your age'));
+        // document.write(age > 19 ? '성인입니다' : '미성년자 입니다');
+        
+        // 1.사용자에게 정수 두 개를 입력 받아서 둘중 더큰수와 두수의 차(큰수- 작은수)출력하기
+        // ex) 10, 25 둘줄 더 큰수는 25입니다. 두 수의 차는 15입니다
+
+
+        
+        // let firstnumber = Number(prompt('type any number')); 
+        // let secondnumber = Number(prompt('type any other number'));
+        // // document.write(firstnumber > secondnumber ? '둘중 더큰 수는' + firstnumber +  : '둘중 더큰 수는' + secondnumber );
+        // // document.write(firstnumber > secondnumber ? '두수의 차는'(firstnumber-secondnumber) : '두수의 차는'(secondnumber-firstnumber) );
+
+        // // 위에는 내가쓴거--------------------------
+
+        // //겹치는 문자를 줄이기
+        // // document.write('둘중 더큰 수는' + firstnumber > secondnumber ? firstnumber : secondnumber + '입니다');
+        // // 안됨 왜냐면 >, <(관계연산자) 보다 +(산술연산자)가 먼저 이기 때문에 '50 더큰수는' 이렇게됨 따라서
+        // document.write('둘중 더큰 수는' + (firstnumber > secondnumber ? firstnumber : secondnumber) + '입니다');
+        // //여기에 let winner = firstnumber > secondnumber ? firstnumber : secondnumber; 라고 하고 winner를 적어줘도 됨
+        // document.write('<br>두 수의 차는' + (firstnumber > secondnumber ? firstnumber-secondnumber : secondnumber-firstnumber) + '입니다');
+
+
+
+
+
+
+
+        // 2. 사용자에게 나이를 입력 받아서 나이가 10세 이상, 20세 이하라면 500원
+        // 그 외의 나이라면 무료라고 출력하기
+
+        // let userage = Number(prompt('type your age'));
+        // // document.write('<br><br><br>'+ (20 >= userage >= 10) ? '입장료 : 500원' : '입장료 : 무료');
+
+        // // 위에는 내가쓴거--------------------------(아래는 같은의미 다른 표현 방식)
+
+        // // document.write(userage >= 10 && userage <= 20 ? '입장료 : 500원' : '입장료 : 무료');
+        // document.write(userage < 10 || userage > 20 ? '입장료 : 무료' : '입장료 : 500원');
+        // // document.write(!(userage >= 10 || userage <= 20) ? '입장료 : 무료' : '입장료 : 500원');
+
+
+
+
+
+        // 3. 사용자에게 키와 나이를 입력 받아서
+        // 150cm 이상, 8살 이상이라면 놀이기구 탑승 가능!
+        // 그렇지 않다면 놀이기구 탑승 불가능! 출력하기
+
+        // let height = Number(prompt('type your height'));
+        // let agetwo = Number(prompt('type your age'));
+        // document.write(height >= 150 && agetwo >= 8 ? 'you can ride this' : 'you cant ride this');
+
+
+
+
+
+        // 4. 한 상자 당 20개의 라면이 들어간다 사용자에게 라면의 갯수를 입력 받아서
+        // 필요한 상자의 갯수를 출력하기
+        // ex) 20  --> 1 , 22  --> 2
+
+        // let ramen = Number(prompt('how many ramen do you have?'));
+        // let calculate = Number(parseInt(ramen / 20));
+        // let rest = Number(ramen % 20);
+        // document.write('you need' +  );
+
+        // // 위에는 내가쓴거--------------------------
+
+        // let ramen = Number(prompt('how many ramen do you have?'));
+        // document.write(ramen % 20 == 0 ? parseInt(ramen / 20) : parseInt(ramen / 20) + 1 );
+        // //정리
+        // let ramen = Number(prompt('how many ramen do you have?'));
+        // let boxCnt = ramen % 20 == 0 ? parseInt(ramen / 20) : parseInt(ramen / 20) + 1;
+        // document.write('당신은' + boxCnt + '개의 상자가 필요합니다.');
+        // // or
+        // let ramen = Number(prompt('how many ramen do you have?'));
+        // let capa = 20;
+        // let boxCnt = ramen % capa == 0 ? parseInt(ramen / capa) : parseInt(ramen / capa) + 1;
+        // document.write('당신은' + boxCnt + '개의 상자가 필요합니다.');
+        // // or
+        // let ramen = Number(prompt('how many ramen do you have?'));
+        // let capa = 20;
+        // let boxCnt = parseInt(ramen / capa) + (ramen % capa == 0 ? 0 : 1);
+        // document.write('당신은' + boxCnt + '개의 상자가 필요합니다.');
+
+        //삼항연산자 없이
+        let ramen = Number(prompt('how many ramen do you have?'));
+        let capa = 20;
+        document.write('당신은' + Math.ceil(ramen / capa) + '개의 상자가 필요합니다.');
+
+    </script>
+</body>
+</html>

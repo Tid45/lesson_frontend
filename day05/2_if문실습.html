@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2, p { text-align: center; }
+
+    p { color: aquamarine;
+        font-size: 50px;
+        font-weight: 900; }
+</style>
+<body>
+    <h2>결과</h2>
+    <script>
+        //사용자에게 정수를 입력받고
+        // 정수가 짝수라면 <p>짝수</p>라고 출력
+        // let num = Number(prompt('type number'));
+
+        // if (num % 2 == 0) {
+        //     document.write("<p>짝수</p>");
+        // } else {
+        //     document.write("<p>홀수</p>");
+        // }
+
+        // ----------------
+
+        let num1 = Number(prompt('type number'));
+        let num2 = Number(prompt('type number'));
+
+        document.write('<p>');
+        if (num1 > num2) {
+            document.write(num1);
+        } else {
+            if (num2 > num1) {
+                document.write(num2);
+            } else {
+                document.write('같다');
+            }
+        }
+        document.write('<p>');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비교연산자</h1>
+    <script>
+        // 비교연산자의 피연산자 자리에는 어떤 타입이 올 수 있나에 대하여
+        console.log(10 > '10');
+        // false
+        console.log(10 == '10');
+        // true
+        console.log('안녕' < '반가워');
+        // false
+        console.log('a' < 'b');
+        // true - 아스키코드 값으로 변환하여 판단
+        // apple 을 쳤을때 문자 하나하나 아스키코드값으로 변환후 저장되는거임
+        // 문자 '5' 또한 아스키코드 값으로 변환되서 아스키코드 값이 53으로 변환됨
+        console.log('5' == 53);
+        // false : 문자값> 아스키코드랑 숫자형과 비교하게 되니 서로 다른 자료형이라 false가 뜸
+
+        console.log('5' == 5);
+        // true
+        console.log('5' === 5);
+        // false
+        console.log('5' != 5);
+        // false
+        console.log('5' !== 5);
+        // true
+
+        console.log(0.2 + 1 == 1.2);
+        //true
+        let a = 0.1;
+        let b = 0.2;
+        // 소수점은 값을 저장할때 이진수로 저장 즉 0.2가  0.110110... 이런식으로 저장 > 오차가 발생할수 있음
+        let sum = a + b;
+        console.log(sum == 0.3);
+        //false
+        console.log(sum);
+        //0.300000000000004
+
+        // !!! 따라서 정수로 만들어서 계산하는걸 추천 !!! - 불가피하면 반올림을 사용하여 계산
+        // ??
+    
+
+    </script>
+</body>
+</html>

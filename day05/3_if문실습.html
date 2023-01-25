@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {background-color: black;}
+
+        h2, p {text-align: center; color: white;}
+
+        p { font-size: 50px; color: aquamarine; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>결과</h2>
+    <script>
+        // 1.사용자에게 점수를 입력받아서 해당 점수가 
+        // 90이상 이면 A
+        // 80이상 90미만 B
+        // 70이상 50미만 C
+        // 70미만 F
+        // 당신의 점수는 C입니다
+
+        // let final;
+
+        // document.write(); 
+
+        // if (score >= 90) {
+        //     final ='A';
+        // } else if ( score >= 80) {
+        //     final ='B';
+        // } else if ( score >= 70) {
+        //     final ='C';
+        // } else {
+        //     final ='F';
+        // }
+
+        // document.write('<p>your score is ' + final + '</p>'); 
+        // document.write(`<p>your score is ${final} </p>`);
+
+        // ` : back tik  - 문자열로 인식 그리고 &{} 사이에 있는건 선언된것으로 대채됨
+
+        // 2. 사용자에게 년도를 입력받아서 
+        // 윤년이라면 운년, 평년이라면 평년 출력
+        // 4의 배수O,100의 배수O, 400의 배수O 윤년 - 2000  
+        // 4의 배수O,100의 배수O, 400의 배수X 평년 - 1200 1900      
+        // 4의 배수O,100의 배수X, 400의 배수X 윤년 - 2012 2020
+        // 4의 배수X,100의 배수X, 400의 배수X 평년 - 2021 2023
+
+        // let year = Number(prompt('type year'));
+        // if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0 ) {
+        //     document.write(`<p>${year}년도는 윤년입니다</p>`);
+        // }
+
+        // if(year % 4 == 0 && year % 100 == 0 && year % 400 != 0 ) {
+        //     document.write(`<p>${year}년도는 평년입니다</p>`);
+        // }
+
+        // if(year % 4 == 0 && year % 100 != 0 && year % 400 != 0 ) {
+        //     document.write(`<p>${year}년도는 윤년입니다</p>`);
+        // }
+
+        // if(year % 4 != 0 && year % 100 != 0 && year % 400 != 0 ) {
+        //     document.write(`<p>${year}년도는 평년입니다</p>`);
+        // }
+
+        // -------------------------
+
+        let year = Number(prompt('type year'));
+
+        if( year % 4 == 0 && year % 100 == 0 ) {
+            윤년
+        } else if ( year % 4 && year % 400 != 0 ) {
+            ㅇ
+        }
+
+
+        // or
+
+        // if (year % 400 == 0) {
+        //     document.write(`<p>${year}년도는 윤년입니다</p>`);
+
+        // } else if (year % 100 == 0) {
+        //     document.write(`<p>${year}년도는 평년입니다</p>`);
+
+        // } else if (year % 4 == 0 ) {
+        //     document.write(`<p>${year}년도는 윤년입니다</p>`);
+
+        // } else {
+        //     document.write(`<p>${year}년도는 평년입니다</p>`);
+        // }
+
+        // ------------------------ 밑으로는 내가한거
+
+        // let year = Number(prompt('type year'));
+        //    let result2;
+
+        // if( year%4 == 0 ) {
+        //     if( year%100 == 0 ) {
+        //         if( year%400 == 0 ) {
+        //             result2 = '윤년1'
+        //         } else {
+        //             result2 = '평년1'
+        //         }
+        //     } else {
+        //         result2 = '윤년2'
+        //     }
+        // } else {
+        //     result2 = '평년2'
+        // }
+
+            // document.write(result2);
+
+        // -------------------
+
+        // let year2 = Number(prompt('type year'));
+
+        // if ( year2 % 4 == 0 ? )
+
+    </script>
+</body>
+</html>
