@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>속성과 메소드의 틀을 만들어 놓고, 속성값만 우리가 원하게 바꾸는 방법</h2>
+    <script>
+        let a = new Book('배상업의 대모험', '홍길동', 15000);
+        // a.title = '배상업의 대모험';
+        // a.price = 15000;
+        // a.author = '홍길동';
+        // new : 연산자, 만들어진 객체를 메모리에 할당시키는 기능을 한다
+        // 생성자를 만들때에는 new를 써야함
+        console.log(a);
+
+        let b = new Book('곰세마리', '미상', 3500);
+
+        a.show();
+        b.show();
+
+        let c = new Book();
+        c.show();
+
+        // 객체를 만들때는 쓰는 함수(생성자) 를 쓸때는 암묵적으로 첫번째를 대문자로 적음
+        function Book(title = '기본값', author = '기본값', price = 0) {
+            this.title = title;
+            //this를 지금 만들어지고 있는 이라고 해석하면됨 
+            this.author = author;
+            this.price = price;
+            this.show = function(){
+                console.log(`책정보`);
+                console.log(`책제목 : ${this.title}`);
+                console.log(`저자 : ${this.author}`);
+                console.log(`가격 : ${this.price}`);                
+            };
+        }
+    </script>
+</body>
+</html>

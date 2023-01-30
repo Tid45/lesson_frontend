@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Date 객체</h2>
+    <script>
+        let a = new Date();
+        console.log(a);
+        //Date 객체 안의 메소드
+        console.log(a.getFullYear());
+        //getFullYear() : 해당 날짜 객체의 년도를 return
+
+        console.log(a.getDay());
+        //getDay() : 해당 날짜 객체의 요일을 return
+        // 0:일요일  1:월요일  ~  6:토욜일
+
+        console.log(a.getMonth());
+        //getMonth() : 해당 날짜 객체의 월을 return
+        // 0:1월  1:2월  ~  11:12월
+
+        console.log(a.getDate());
+        //getDate() : 해당 날짜 객체의 일을 return
+
+        //yyyy-mm-dd
+        let b = new Date('2022-11-12');
+        console.log(b);
+
+        let c = new Date('2022-11-20T21:00:30');
+        console.log(c);
+
+        let d = new Date('2020-10-15T10:00:00Z');
+        console.log(d);
+        //Z : 날짜 기준선 그리고 그 기준이 다른나라 영국? 이라서 +9 된 값이 나옴
+
+        let e = new Date(1000);
+        //밀리초 단위 : 1000밀리초 == 1초
+        //1970년 1월 1일 9:00:00 으로부터 밀리초만큼 지난 날짜 객체가 만들어진다.
+        console.log(e);
+</script>
+</body>
+</html>
