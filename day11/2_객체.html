@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>자바스크립트 객체</h2>
+    <script>
+        let ar = [1, 5, 6]
+        console.log(ar[0]);
+        let a = {
+            title : '배상엽의 대모험',
+            pages : 500,
+            author : '홍길동',
+            price : 15000, // 마지막 콤마는 통일성을 위해 붙이기도 한다
+            'book-store' : '역삼',
+            //방이름에 띄어쓰기가 필여하거나 명령어로 설정하고싶으면 ''안에 적어도 됨 
+            print : function() {
+                console.log('객체 안에 있는 함수가 실행됨');
+            }
+        }
+        console.log(a);
+        //객체 속에 저장된 값을 사용하기 위해서는
+        //1. 하위연산자(.)와 방이름을 사용할 수 있다
+        console.log(a.title);
+        //2. 인덱스연산자와 방이름을 사용할 수 있다 (방이름을 문자열로 알려줘야함)
+        //이렇게 .혹은 []으로 방이름을 적어 원하는 값을 불러올 수 있음
+        console.log(a['title']);
+        console.log(a['book-store']);
+        //방 이름이 ''로 감싸져 있을 경우 반드시 []안에 적어서 불러와야함
+        a.print();
+    </script>
+</body>
+</html>
