@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array 객체</h2>
+    <script>
+        let numbers = [10, 20, 30, 40];
+        console.log(numbers);
+
+        for (i of numbers){
+            console.log(i);
+        }
+
+        numbers.forEach((a, b, c)=> {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log('----------');
+        });
+        //각각 10, 20, 30, 40 때마다 a 10을 넣어서 돌림
+        // a 는 처음에 10 두번째는 20..
+        // b의 경우는 인덱스 번호로 들어가서 0, 1, 2 .. 이렇게 들어감
+        // c는 결과로 배열이 나옴 따라서 자기자신 자체가 들어가는거임
+        // numbers.forEach((element, index, array)
+
+        // forEach() 함수의 인자에는 (익명)함수를 넘겨주고,
+        // 그 익명 함수는 3개의 파라미터를 갖고 있다
+        // 각각 Element 에는 배열 속 요소가 대입되고
+        // index에는 배열 속 인덱스가
+        
+        // let result = numbers.map((value, index, array)=> value * 2);
+        // return 일경우 {}와 return 생략
+
+        let result = numbers.map((value, index, array)=> value * 2);
+        //로 생략 가능 : 안쓰니까
+        
+        console.log(result);
+        console.log(numbers);
+
+        // let res2 = numbers.filter((value, index, array)=>{
+        //     // return value > 25;
+        //     return value % 4 == 0;
+        // });
+
+        //로 생략 가능
+        let res2 = numbers.filter((value, index, array)=>value % 4 == 0);
+
+        console.log(res2);
+
+        // for(i of numbers){
+        //     if (i % 4 == 0){
+        //         //배열에 i를 추가해줘
+        //     }
+        // };
+
+        // //이거를 위에 코드처럼 만든거임
+
+        // let res3 = numbers.find((value, index, array)=>{
+        //     return value % 4 == 0;
+        // });
+
+        // console.log(res3);
+        //결과는 20만 나옴 : 한개만 찾음 2번째에 해당하는 값을 찾고싶으면 index를 써야 함
+
+        let res3 = numbers.find((value, index, array)=> index > 1 && value % 4 == 0);
+
+        console.log(res3);
+
+        let res4 =  numbers.findIndex((value, index, array)=> index > 1 && value % 4 == 0);
+        console.log(res4);
+    </script>
+</body>
+</html>
